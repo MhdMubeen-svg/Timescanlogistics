@@ -1,0 +1,186 @@
+export type Post = {
+  slug: string;
+  title: string;
+  date: string;
+  tag: string;
+  audience: string[];
+  excerpt: string;
+  body: string[];
+};
+
+export const posts: Post[] = [
+  {
+    slug: "carm-checklist-canadian-importers",
+    title: "CARM is fully live: a working checklist for Canadian importers",
+    date: "2026-06-18",
+    tag: "Customs",
+    audience: ["Importers", "E-commerce"],
+    excerpt: "CBSA's CARM system changes how duties are assessed, secured and paid. Here is the practical checklist we run with every importer of record.",
+    body: [
+      "CBSA's Assessment and Revenue Management (CARM) system has shifted the mechanics of importing into Canada from broker-managed to importer-managed. The importer of record - not the customs broker - now registers on the CARM Client Portal, posts financial security, and is accountable for duty and tax payments through their own account.",
+      "The working checklist we run with clients: first, confirm your business number and import-export (RM) account are active. Second, register on the CARM Client Portal and delegate access to your broker and forwarder. Third, arrange your own financial security - a customs bond or cash deposit - because release-prior-to-payment privileges no longer ride on your broker's bond. Fourth, reconcile your statements of account monthly; assessment errors are far easier to correct inside the dispute window.",
+      "The most common failure we see is delegation: companies register the portal account and stop there, leaving their broker unable to transact on their behalf. The second most common is classification drift - CARM's self-assessment posture means misclassified goods accumulate liability quietly until a verification surfaces it.",
+      "If you import even occasionally into Canada, treat CARM registration the way you treat GST registration: basic infrastructure, not an optional extra. Our customs team walks new importers through the full setup as part of onboarding - usually within a week.",
+    ],
+  },
+  {
+    slug: "cusma-rules-of-origin-guide",
+    title: "CUSMA/USMCA rules of origin: when 'Made in North America' actually saves you duty",
+    date: "2026-06-05",
+    tag: "Trade",
+    audience: ["Importers", "Exporters", "Manufacturers"],
+    excerpt: "Free trade between Canada, the US and Mexico is not automatic. Understanding origin rules and certification is what turns the agreement into savings.",
+    body: [
+      "The Canada-United States-Mexico Agreement (CUSMA, or USMCA in the US) eliminates duties on most goods traded within North America - but only for goods that qualify as originating, and only when the claim is properly certified. Neither happens by default.",
+      "Origin is determined by product-specific rules: some goods qualify by being wholly produced in the region, others through a tariff-shift test (non-originating inputs change classification during manufacturing), and others by regional value content thresholds. A product assembled in Ontario from imported components may or may not qualify - the rule for its specific HS code decides.",
+      "Certification is self-declared under CUSMA: no government-stamped certificate exists. The certifier (importer, exporter or producer) provides a set of minimum data elements and takes legal responsibility for the claim. That flexibility cuts paperwork but raises audit exposure - customs authorities in all three countries verify claims, and an unsupported claim means repaid duties plus penalties.",
+      "For manufacturers, the practical move is a solid origin analysis per product family, refreshed when sourcing changes. For importers, ask your supplier for the certification data before the goods ship, not after entry. We help clients build both - the analysis and the document trail that survives a verification.",
+      "One more note: even where most-favoured-nation duty is already zero, CUSMA claims can still matter for other measures. When trade policy shifts quickly - as it has across North America in recent years - documented origin is an asset.",
+    ],
+  },
+  {
+    slug: "us-de-minimis-ecommerce-shift",
+    title: "The end of easy de minimis: what US-bound e-commerce sellers must rethink",
+    date: "2026-05-22",
+    tag: "E-commerce",
+    audience: ["E-commerce", "Exporters"],
+    excerpt: "The US has overhauled duty-free treatment for low-value parcels. Cross-border sellers need a new playbook: bulk clearance, DDP pricing and smarter fulfillment placement.",
+    body: [
+      "For years, cross-border e-commerce into the United States was built on Section 321 de minimis: parcels under the threshold entered duty-free with minimal formalities. That foundation has been substantially dismantled - low-value shipments from major origin countries now broadly face duties and formal processing, and the economics of ship-one-parcel-at-a-time models have changed with it. Because these rules have moved several times, verify the current treatment for your origin country before pricing your next season.",
+      "The strategic responses we are implementing with sellers fall into three buckets. First, consolidation: moving goods in bulk to North America, clearing commercially, and fulfilling domestically - trading parcel-level duty avoidance for lower freight per unit and faster delivery promises.",
+      "Second, landed-cost transparency: sellers shifting to DDP (delivered duty paid) pricing absorb duties into the retail price rather than surprising customers at delivery. That requires accurate HS classification per SKU - a spreadsheet exercise that pays for itself in avoided disputes and returns.",
+      "Third, fulfillment placement: with Canadian de minimis for US-origin goods under CUSMA courier thresholds still relatively favourable, some sellers now split inventory - a US node for US customers, a Canadian 3PL for Canadian customers - rather than serving both markets from one warehouse.",
+      "None of this is one-size-fits-all. Order volume, SKU count, product duty rates and return rates all move the answer. We model the scenarios with sellers before they commit to a structure - it is far cheaper to model than to migrate.",
+    ],
+  },
+  {
+    slug: "importing-into-canada-first-shipment",
+    title: "Importing into Canada: a first-shipment guide for new importers",
+    date: "2026-05-14",
+    tag: "Customs",
+    audience: ["Importers"],
+    excerpt: "Business number, CARM, classification, and the documents that clear smoothly - the sequence that makes a first import boring, in the best way.",
+    body: [
+      "A first commercial import into Canada has a fixed sequence, and following it in order is what keeps the shipment boring. Step one: obtain a business number with an import-export (RM) account from CRA, then register on CBSA's CARM Client Portal and post financial security.",
+      "Step two: classify your goods. Every product takes a 10-digit tariff classification that determines the duty rate and whether other government departments are involved - food touches CFIA, health products touch Health Canada, and so on. Classify before you order, not after the ship sails; the duty rate belongs in your costing.",
+      "Step three: agree the Incoterm with your supplier deliberately. FOB origin port is a sensible default for ocean freight - you control the international leg and see the true freight cost. EXW puts origin charges on you in a country you may not know; CIF hides the freight margin in the goods price. Avoid DDP as a buyer unless you fully trust the seller's customs compliance in your own country.",
+      "Step four: the document set - commercial invoice with accurate values and currency, packing list, and transport document, plus any certificates the goods require. We pre-check documents against the entry before arrival so clearance happens while the container is still on the water.",
+      "Budget for the full landed cost: goods, freight, insurance, duty, GST (recoverable for registrants), clearance fees and delivery. New importers who cost only 'goods plus freight' meet their real margin at entry - the wrong time to meet it.",
+    ],
+  },
+  {
+    slug: "exporting-from-canada-cers-documents",
+    title: "Exporting from Canada: CERS declarations, certificates and getting paid",
+    date: "2026-04-28",
+    tag: "Trade",
+    audience: ["Exporters", "Manufacturers"],
+    excerpt: "Export declarations, controlled goods checks, origin certificates and payment-secure documentation - the exporter's compliance stack, in order.",
+    body: [
+      "Canadian exporters have a lighter compliance load than importers, but the obligations that exist have teeth. Most commercial exports valued at CAD $2,000 or more to destinations other than the US require an export declaration filed through CBSA's Canadian Export Reporting System (CERS) before the goods leave.",
+      "Before any first export, run the control check: is the product on the Export Control List, is the destination sanctioned, and is the end-user legitimate? Most goods to most destinations move freely - but the exporter, not the forwarder, carries the legal responsibility for that determination, and we help clients document it.",
+      "Destination requirements drive the certificate stack: certificates of origin for preferential tariff claims under Canada's trade agreements (CUSMA, CETA, CPTPP and others), phytosanitary certificates for plant products, health certificates for food, and legalized documents for some Middle East markets - a specialty of our Dubai office.",
+      "Where payment rides on documents - letters of credit especially - precision is money. Banks reject documents for discrepancies as small as a misplaced comma against the credit terms. We prepare document sets against the letter of credit line by line, because a clean presentation is the difference between payment on time and weeks of amendments.",
+      "Finally, choose selling terms that match your capability. Selling CIF or CPT lets you control freight and quote a complete price - often a competitive advantage - while selling EXW hands the logistics and its visibility to your buyer.",
+    ],
+  },
+  {
+    slug: "vancouver-vs-prince-rupert-routing",
+    title: "Vancouver or Prince Rupert? Choosing your Pacific gateway",
+    date: "2026-04-15",
+    tag: "Ocean Freight",
+    audience: ["Importers", "Manufacturers"],
+    excerpt: "Canada's two Pacific gateways serve different supply chains. Sailing time, rail connections and congestion risk decide which one is yours.",
+    body: [
+      "Canadian importers from Asia have two main Pacific gateways, and they are less interchangeable than they look. Vancouver is the country's largest port, with dense sailing options, deep local drayage and warehouse capacity, and direct access to the BC market. Prince Rupert is smaller but sits a day closer to Asia by sailing time and was purpose-built as an intermodal rail gateway to Central Canada and the US Midwest.",
+      "The routing logic: if your cargo's destination is Vancouver or the Lower Mainland, the answer is usually Vancouver - trucking from Prince Rupert is long and expensive. If your freight rails to Toronto, Montreal, Calgary or Chicago, Prince Rupert's on-dock rail can deliver competitive or faster door-to-door times with less local congestion exposure.",
+      "Congestion and disruption risk deserve a line in your planning. West-coast ports periodically face labour actions, weather events and peak-season backlogs; splitting volumes across gateways - or holding the option to switch - is inexpensive insurance for high-volume importers.",
+      "Rail availability is the quiet variable: intermodal capacity in and out of both ports tightens during grain season and peak retail months. We monitor dwell and rail-car availability at both gateways and route bookings accordingly - the cheapest port on paper is not the cheapest port with three weeks of dwell.",
+    ],
+  },
+  {
+    slug: "cfia-food-imports-canada",
+    title: "Food imports into Canada: what CFIA expects before your shipment lands",
+    date: "2026-03-30",
+    tag: "Customs",
+    audience: ["Importers", "Manufacturers"],
+    excerpt: "Safe Food for Canadians licences, preventive control plans and import declarations - the compliance layer that food importers cannot improvise.",
+    body: [
+      "Food is one of the most regulated import categories in Canada, and the framework is the Safe Food for Canadians Regulations (SFCR). Most businesses importing food commercially need a Safe Food for Canadians licence before the goods arrive - applying after the container lands is a storage bill, not a plan.",
+      "Beyond the licence, importers must maintain a preventive control plan appropriate to their products and traceability records that can track food one step back and one step forward. Certain commodities - meat, dairy, eggs, fish, fresh produce - carry additional certificate, registration or inspection requirements from the origin country.",
+      "At the border, food entries are declared with CFIA-specific data through the integrated import declaration, and shipments can be referred for inspection. Accurate product descriptions, origin details and licence numbers on the entry are what keep referral rates low.",
+      "Our leadership's background includes food manufacturing and distribution, which shapes how we handle these shipments: temperature integrity through the whole chain, documentation checked against CFIA requirements before loading, and honest transit planning that respects shelf life. Food freight rewards forwarders who understand the product, not just the container.",
+    ],
+  },
+  {
+    slug: "transpacific-capacity-outlook",
+    title: "Asia-North America capacity outlook: reading this year's peak season",
+    date: "2026-05-30",
+    tag: "Ocean Freight",
+    audience: ["Importers", "E-commerce"],
+    excerpt: "Blank sailings, rate volatility and earlier booking windows - how to protect space and budget on the transpacific this peak season.",
+    body: [
+      "Every peak season on the transpacific has its own personality, but the structural pattern repeats: demand concentrates into a shorter window, carriers manage capacity with blank sailings, and spot rates move faster than budgets. The importers who suffer least are the ones who treat space as something to secure, not something to shop for in August.",
+      "Three practical protections. First, forecast early and share it: carriers and forwarders allocate space to predictable volume. A rough monthly TEU forecast shared in spring buys more protection than a precise one delivered in September.",
+      "Second, split your exposure between fixed and spot. Fixed-rate allocations protect budget on your base volume; spot capacity handles the upside. All-spot strategies win in soft markets and get punished in tight ones - decide which risk your business can afford.",
+      "Third, watch the calendar effects: pre-holiday factory closures in Asia compress shipping windows, and North American rail and warehouse capacity tightens downstream of the ports weeks after vessels arrive. Booking the vessel is half the job; securing the inland leg is the other half.",
+    ],
+  },
+  {
+    slug: "air-vs-sea-air-mode-choice",
+    title: "Air, ocean, or sea-air? Choosing mode by landed cost, not habit",
+    date: "2026-05-02",
+    tag: "Strategy",
+    audience: ["Importers", "Exporters", "Manufacturers"],
+    excerpt: "A framework for weighing transit time against total landed cost - with the Dubai sea-air option most shippers overlook.",
+    body: [
+      "Mode choice is a cost-of-time calculation, but most companies make it by habit: this product always ships ocean, that one always flies. The better question for each shipment: what does a day of transit time cost this cargo - in inventory carrying cost, in stockout risk, in launch-date value?",
+      "Ocean freight wins when time is cheap: stable demand, long shelf life, planned replenishment. Air wins when time is expensive: line-down situations, launches, perishables, high value-to-weight goods where carrying cost dwarfs the freight difference.",
+      "The overlooked middle path is sea-air, typically via Dubai on Asia-to-North America and Asia-to-Europe flows: cargo sails the first leg, then flies the second. Transit lands between pure ocean and pure air - and so does the cost. For shipments that are late but not desperate, it is often the rational answer, and our Dubai office runs these programs routinely.",
+      "Rail deserves a seat at the table too: intermodal across North America, and long-haul corridors across Asia, price between ocean and air with transit to match. A yearly mode review across your SKU portfolio - rather than per-shipment firefighting - is where the structural savings live.",
+    ],
+  },
+  {
+    slug: "shipment-visibility-control-tower",
+    title: "Shipment visibility that actually changes decisions",
+    date: "2026-03-20",
+    tag: "Technology",
+    audience: ["Manufacturers", "Importers", "E-commerce"],
+    excerpt: "Milestones are not insight. What a control tower should tell you before a delay becomes a stockout.",
+    body: [
+      "Most tracking tells you where a container was. Useful visibility tells you what to do next: which purchase orders are at risk, which delay actually threatens a production schedule or a stock-out, and which exceptions need a decision today versus a note in the file.",
+      "The difference is context. A vessel delay of four days is noise for safety-stocked SKUs and a crisis for a promoted product landing the week of a campaign. A control tower earns its name when it joins shipment events to order data - so alerts arrive ranked by business impact, not sorted by container number.",
+      "The second ingredient is exception discipline: most shipments should generate no communication at all. Teams drowning in on-time notifications stop reading, and then miss the one alert that mattered. We tune thresholds with each customer - what counts as late, for which lanes, for which products.",
+      "Our leadership team's SAP supply-chain and analytics background shapes how we build this: visibility as a planning input, feeding your S&OP and replenishment decisions - not as a wall of dots on a map.",
+    ],
+  },
+  {
+    slug: "incoterms-mistakes-importers",
+    title: "Five Incoterms mistakes that cost importers real money",
+    date: "2026-02-14",
+    tag: "Trade",
+    audience: ["Importers", "Exporters", "E-commerce"],
+    excerpt: "From EXW surprises to DDP tax exposure - the terms that quietly shift risk and cost onto the wrong party.",
+    body: [
+      "Incoterms decide who pays for what, where risk transfers, and who handles customs - and choosing them casually is one of the most expensive quiet habits in international trade. Five mistakes we correct most often:",
+      "One: buying EXW without understanding origin costs. Ex Works makes the buyer responsible from the seller's door - including export formalities in a country where the buyer has no presence. FCA achieves similar control with the seller handling export clearance.",
+      "Two: buying CIF and assuming the freight is a good deal. Under CIF the seller controls (and marks up) the ocean freight, and risk still transfers to the buyer at origin loading. Buyers often pay more freight than they would buying FOB and booking through their own forwarder - without gaining any protection.",
+      "Three: selling or buying DDP without a tax plan. Delivered Duty Paid makes the seller the importer in the buyer's country - triggering registration, duty and tax obligations sellers rarely anticipate. E-commerce sellers using DDP deliberately can make it work; industrial sellers stumbling into it usually cannot.",
+      "Four: ignoring the insurance gap. Only CIF and CIP oblige the seller to insure - and only at minimum cover. Every other term leaves insurance to whoever holds the risk, which is frequently nobody until a claim reveals it.",
+      "Five: leaving the term off the contract or using retired terms. 'FOB destination' is not an Incoterm; ambiguity becomes a dispute exactly when money is on the line. State the term, the named place, and the version - Incoterms 2020 - on every quote and invoice.",
+    ],
+  },
+  {
+    slug: "duty-relief-drawback-manufacturers",
+    title: "Duty relief and drawback: recovering money Canadian manufacturers leave at the border",
+    date: "2026-01-22",
+    tag: "Customs",
+    audience: ["Manufacturers", "Exporters"],
+    excerpt: "If you import inputs and export finished goods, Canada's duty relief and drawback programs may be quietly owed to you.",
+    body: [
+      "Manufacturers that import dutiable inputs and later export finished goods often pay duty they are entitled to recover. Canada's two main mechanisms: the Duties Relief Program, which waives duty upfront on goods that will be exported, and Duty Drawback, which refunds duty already paid once exportation is proven - with claims possible for several years back.",
+      "The qualifying logic is broad: goods exported in the same condition, goods consumed or expended in manufacturing exports, and goods incorporated into exported products can all qualify. The constraint is evidence - import entries, production records and export proof must link together, which is why the companies that benefit are the ones with disciplined record-keeping.",
+      "Two adjacent tools worth knowing: customs bonded warehouses defer duty until goods enter the Canadian market (and eliminate it for goods re-exported), and correct tariff classification sometimes reveals inputs that were never dutiable in the first place - a review worth doing before building a drawback claim on top of a wrong rate.",
+      "The practical first step is a duty-spend review: what did you pay in duty over the past four years, on which inputs, and what share of the related output left the country? For exporting manufacturers, that review frequently pays for itself - and we run it as part of our supply chain advisory work.",
+    ],
+  },
+];
