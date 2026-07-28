@@ -3,5 +3,10 @@ const nextConfig = {
   reactStrictMode: true,
   compress: true,
   poweredByHeader: false,
+  output: "export",
+  trailingSlash: true,
+  images: {
+    unoptimized: true,
+  },
 };
 export default nextConfig;
